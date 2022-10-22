@@ -14,7 +14,7 @@
 #define FLEX_BETA
 #endif
 
-/* First, we deal with  platform-specific or compiler-specific issues. */
+/* First, we deal with  platform-specific or compiler-specific issues,then we need to save changes. */
 
 /* begin standard C headers. */
 #include <stdio.h>
