@@ -20,6 +20,14 @@ number (0|[1-9]+{digits}*)\.?{digits}*
 im [i]
 complexnum {ws}*[-]*{ws}*{number}{ws}*[+|-]{ws}*{number}{ws}*{im}{ws}*
 
+%%
+{complexnum} {RmWs(yytext); sscanf(yytext,"%lf %lf",&(yylval.real),&(yylval.img)); return CNUMBER;}
+{op} |
+\n {return *yytext;}
+{ws} { /* Do nothing */ } 
+. { /* Do nothing */ }
+%%
+
 void RmWs(char* str) {
   int i = 0, j = 0;
   char temp[strlen(str) + 1];
