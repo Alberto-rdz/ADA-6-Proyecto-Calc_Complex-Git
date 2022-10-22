@@ -1,2 +1,8 @@
 # ADA-6-Proyecto-Calc_Complex-Git
-Proyecto Calculadora de números compleos
+Proyecto Calculadora de números complejos
+
+Integrantes : 
+JUAN PABLO RODRIGUEZ FALCON
+JESUS ALBERTO RODRIGUEZ CIME
+MICHAELL SALVADOR ALBERTO SOLIS MIRAFUENTES
+ROGER EMANUEL DELGADO ALEJOS
