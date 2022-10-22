@@ -1354,4 +1354,8 @@ complex complex_div (complex c1, complex c2) {
   c3.real = (c1.real*c2.real + c1.img*c2.img) / d;
   c3.img = (c1.img*c2.real - c1.real*c2.img) / d;
   return c3;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 204ec9e2eae4fbadce572fabe20ba631e7aa7172
