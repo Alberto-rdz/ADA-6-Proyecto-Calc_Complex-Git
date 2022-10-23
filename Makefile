@@ -1,15 +1,9 @@
-complex_cal : complex_cal.o
-	gcc -o complex_cal
+complex_cal: complex_cal.lex.yy.c complex_cal.tab.c
+	gcc -o complex_cal complex_cal.lex.yy.c complex_cal.tab.c
 
-complex_cal.o: complex_cal.lex.yy.o complex_cal.tab.o
-	gcc complex_cal.lex.yy.o complex_cal.tab.o -o complex_cal.o
-
-complex_cal.o :	complex_cal.c
-	
-
-
-
-bison -d -v complex_cal.y 
-flex -o complex_cal.lex.yy.c complex_cal.lex 
-gcc -o complex_cal complex_cal.lex.yy.c complex_cal.tab.c 
-./complex_cal
+complex_cal.lex.yy.c:
+	flex -o complex_cal.lex.yy.c complex_cal.lex
+complex_cal.tab.c: complex_cal.tab.h
+	bison complex_cal.y 
+complex_cal.tab.h:
+	bison -d complex_cal.y 
